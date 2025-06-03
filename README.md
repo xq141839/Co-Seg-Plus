@@ -4,7 +4,89 @@
 </p>
 
 <svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
-  <!-- 将上面生成的SVG代码完整复制到这里 -->
+  <defs>
+    <linearGradient id="semanticGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8BC34A;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="instanceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2196F3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#03DAC6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="promptGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF9800;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFC107;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="coreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E91E63;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#9C27B0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#673AB7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="200%" y2="0%">
+      <stop offset="0%" style="stop-color:#2196F3;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#4CAF50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF9800;stop-opacity:1" />
+      <animateTransform attributeName="gradientTransform" type="translate" values="-200 0;200 0;-200 0" dur="4s" repeatCount="indefinite"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="200" fill="#ffffff"/>
+  
+  <!-- Intertwined Learning Paths -->
+  <ellipse cx="80" cy="70" rx="30" ry="20" fill="none" stroke="url(#semanticGrad)" stroke-width="3" opacity="0.8">
+    <animateTransform attributeName="transform" type="rotate" values="0 80 70;120 80 70;240 80 70;360 80 70" dur="6s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <ellipse cx="120" cy="70" rx="20" ry="30" fill="none" stroke="url(#instanceGrad)" stroke-width="3" opacity="0.8">
+    <animateTransform attributeName="transform" type="rotate" values="120 120 70;240 120 70;360 120 70;480 120 70" dur="6s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <ellipse cx="100" cy="80" rx="25" ry="25" fill="none" stroke="url(#promptGrad)" stroke-width="3" opacity="0.8" transform="rotate(45 100 80)">
+    <animateTransform attributeName="transform" type="rotate" values="45 100 80;165 100 80;285 100 80;405 100 80" dur="6s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- Weaving Lines -->
+  <line x1="60" y1="50" x2="100" y2="65" stroke="url(#coreGrad)" stroke-width="2" opacity="0.6">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="4s" repeatCount="indefinite"/>
+  </line>
+  <line x1="120" y1="50" x2="80" y2="90" stroke="url(#coreGrad)" stroke-width="2" opacity="0.6">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="4s" begin="1s" repeatCount="indefinite"/>
+  </line>
+  <line x1="70" y1="100" x2="110" y2="60" stroke="url(#coreGrad)" stroke-width="2" opacity="0.6">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="4s" begin="2s" repeatCount="indefinite"/>
+  </line>
+  
+  <!-- Intersection Nodes -->
+  <circle cx="85" cy="60" r="4" fill="url(#coreGrad)" opacity="0.8">
+    <animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="110" cy="85" r="4" fill="url(#coreGrad)" opacity="0.8">
+    <animate attributeName="r" values="4;6;4" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="90" cy="90" r="4" fill="url(#coreGrad)" opacity="0.8">
+    <animate attributeName="r" values="4;6;4" dur="2s" begin="1s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Central Core -->
+  <circle cx="100" cy="75" r="18" fill="url(#coreGrad)" opacity="0.9">
+    <animate attributeName="r" values="18;22;18" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <text x="100" y="82" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">++</text>
+  
+  <!-- Task Labels -->
+  <rect x="40" y="25" width="50" height="16" rx="8" fill="url(#semanticGrad)" opacity="0.9"/>
+  <text x="65" y="36" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Semantic</text>
+  
+  <rect x="110" y="25" width="45" height="16" rx="8" fill="url(#instanceGrad)" opacity="0.9"/>
+  <text x="132" y="36" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Instance</text>
+  
+  <rect x="70" y="120" width="40" height="16" rx="8" fill="url(#promptGrad)" opacity="0.9"/>
+  <text x="90" y="131" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Prompt</text>
+  
+  <!-- Title -->
+  <text x="220" y="80" font-family="Arial, sans-serif" font-size="42" font-weight="800" fill="url(#titleGrad)">Co-Seg++</text>
+  <text x="220" y="100" font-family="Arial, sans-serif" font-size="12" fill="#666" font-weight="500" letter-spacing="1px">MEDICAL VERSATILE SEGMENTATION</text>
 </svg>
 
 <!-- <i>The icon is generated by recraft.ai.</i> -->
