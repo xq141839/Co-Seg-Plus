@@ -1,0 +1,192 @@
+<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="semanticGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8BC34A;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="instanceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2196F3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#03DAC6;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="promptGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF9800;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFC107;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="coreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E91E63;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#9C27B0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#673AB7;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2196F3;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#4CAF50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF9800;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Filters -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Animations -->
+    <animateTransform id="rotate1" attributeName="transform" attributeType="XML"
+      type="rotate" values="0 80 100;120 80 100;240 80 100;360 80 100"
+      dur="6s" repeatCount="indefinite"/>
+      
+    <animateTransform id="rotate2" attributeName="transform" attributeType="XML"
+      type="rotate" values="0 80 100;-120 80 100;-240 80 100;-360 80 100"
+      dur="6s" repeatCount="indefinite"/>
+      
+    <animateTransform id="rotate3" attributeName="transform" attributeType="XML"
+      type="rotate" values="45 80 100;165 80 100;285 80 100;405 80 100"
+      dur="6s" repeatCount="indefinite"/>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="250" fill="#ffffff"/>
+  
+  <!-- Logo Icon Section -->
+  <g transform="translate(20, 20)">
+    
+    <!-- Intertwined Learning Paths -->
+    <ellipse cx="80" cy="80" rx="60" ry="40" fill="none" stroke="url(#semanticGrad)" 
+             stroke-width="4" opacity="0.8">
+      <animateTransform attributeName="transform" attributeType="XML"
+        type="rotate" values="0 80 80;120 80 80;240 80 80;360 80 80"
+        dur="6s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <ellipse cx="80" cy="80" rx="40" ry="60" fill="none" stroke="url(#instanceGrad)" 
+             stroke-width="4" opacity="0.8">
+      <animateTransform attributeName="transform" attributeType="XML"
+        type="rotate" values="0 80 80;-120 80 80;-240 80 80;-360 80 80"
+        dur="6s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <ellipse cx="80" cy="80" rx="50" ry="50" fill="none" stroke="url(#promptGrad)" 
+             stroke-width="4" opacity="0.8" transform="rotate(45 80 80)">
+      <animateTransform attributeName="transform" attributeType="XML"
+        type="rotate" values="45 80 80;165 80 80;285 80 80;405 80 80"
+        dur="6s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <!-- Collaborative Weaving Lines -->
+    <line x1="30" y1="50" x2="80" y2="60" stroke="url(#coreGrad)" stroke-width="3" 
+          opacity="0.6" stroke-linecap="round">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="4s" repeatCount="indefinite"/>
+    </line>
+    
+    <line x1="110" y1="50" x2="90" y2="90" stroke="url(#coreGrad)" stroke-width="3" 
+          opacity="0.6" stroke-linecap="round">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="4s" begin="1s" repeatCount="indefinite"/>
+    </line>
+    
+    <line x1="40" y1="120" x2="90" y2="100" stroke="url(#coreGrad)" stroke-width="3" 
+          opacity="0.6" stroke-linecap="round">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="4s" begin="2s" repeatCount="indefinite"/>
+    </line>
+    
+    <line x1="60" y1="70" x2="120" y2="90" stroke="url(#coreGrad)" stroke-width="3" 
+          opacity="0.6" stroke-linecap="round">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="4s" begin="3s" repeatCount="indefinite"/>
+    </line>
+    
+    <!-- Intersection Nodes -->
+    <circle cx="70" cy="65" r="6" fill="url(#coreGrad)" filter="url(#glow)">
+      <animate attributeName="r" values="6;9;6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <circle cx="95" cy="75" r="6" fill="url(#coreGrad)" filter="url(#glow)">
+      <animate attributeName="r" values="6;9;6" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    
+    <circle cx="75" cy="105" r="6" fill="url(#coreGrad)" filter="url(#glow)">
+      <animate attributeName="r" values="6;9;6" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    
+    <circle cx="95" cy="95" r="6" fill="url(#coreGrad)" filter="url(#glow)">
+      <animate attributeName="r" values="6;9;6" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Central Collaborative Hub -->
+    <circle cx="80" cy="80" r="22" fill="url(#coreGrad)" filter="url(#glow)" 
+            stroke="rgba(255,255,255,0.3)" stroke-width="2">
+      <animateTransform attributeName="transform" attributeType="XML"
+        type="rotate" values="0 80 80;180 80 80;360 80 80"
+        dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="22;25;22" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    
+    <text x="80" y="87" text-anchor="middle" fill="white" font-family="Arial, sans-serif" 
+          font-size="16" font-weight="bold"></text>
+    
+    <!-- Task Labels -->
+    <rect x="40" y="15" width="60" height="20" rx="10" fill="url(#semanticGrad)" opacity="0.9"/>
+    <text x="70" y="28" text-anchor="middle" fill="white" font-family="Arial, sans-serif" 
+          font-size="12" font-weight="bold">Semantic</text>
+    
+    <rect x="100" y="15" width="50" height="20" rx="10" fill="url(#instanceGrad)" opacity="0.9"/>
+    <text x="125" y="28" text-anchor="middle" fill="white" font-family="Arial, sans-serif" 
+          font-size="12" font-weight="bold">Instance</text>
+    
+    <rect x="55" y="140" width="50" height="20" rx="10" fill="url(#promptGrad)" opacity="0.9"/>
+    <text x="80" y="153" text-anchor="middle" fill="white" font-family="Arial, sans-serif" 
+          font-size="12" font-weight="bold">Prompt</text>
+  </g>
+  
+  <!-- Logo Text Section -->
+  <g transform="translate(200, 60)">
+    <!-- Main Title -->
+    <text x="0" y="50" font-family="Arial, sans-serif" font-size="48" font-weight="800" 
+          fill="url(#textGrad)" letter-spacing="-2px">Co-Seg++</text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="75" font-family="Arial, sans-serif" font-size="14" fill="#666" 
+          font-weight="500" letter-spacing="2px">MEDICAL VERSATILE SEGMENTATION</text>
+  </g>
+  
+  <!-- Feature Icons - 向下移动50px -->
+  <g transform="translate(220, 170)">
+    <!-- Semantic Segmentation -->
+    <g transform="translate(0, 0)">
+      <circle cx="20" cy="20" r="20" fill="url(#semanticGrad)"/>
+      <text x="20" y="27" text-anchor="middle" fill="white" font-family="Arial, sans-serif" 
+            font-size="14" font-weight="bold">S</text>
+      <text x="20" y="50" text-anchor="middle" font-family="Arial, sans-serif" 
+            font-size="12" font-weight="600" fill="#555">Semantic</text>
+      <text x="20" y="65" text-anchor="middle" font-family="Arial, sans-serif" 
+            font-size="12" font-weight="600" fill="#555">Segmentation</text>
+    </g>
+    
+    <!-- Instance Segmentation -->
+    <g transform="translate(100, 0)">
+      <circle cx="20" cy="20" r="20" fill="url(#instanceGrad)"/>
+      <text x="20" y="27" text-anchor="middle" fill="white" font-family="Arial, sans-serif" 
+            font-size="14" font-weight="bold">I</text>
+      <text x="20" y="50" text-anchor="middle" font-family="Arial, sans-serif" 
+            font-size="12" font-weight="600" fill="#555">Instance</text>
+      <text x="20" y="65" text-anchor="middle" font-family="Arial, sans-serif" 
+            font-size="12" font-weight="600" fill="#555">Segmentation</text>
+    </g>
+    
+    <!-- Collaborative Learning -->
+    <g transform="translate(200, 0)">
+      <circle cx="20" cy="20" r="20" fill="url(#promptGrad)"/>
+      <text x="20" y="27" text-anchor="middle" fill="white" font-family="Arial, sans-serif" 
+            font-size="12" font-weight="bold">C</text>
+      <text x="20" y="50" text-anchor="middle" font-family="Arial, sans-serif" 
+            font-size="12" font-weight="600" fill="#555">Collaborative</text>
+      <text x="20" y="65" text-anchor="middle" font-family="Arial, sans-serif" 
+            font-size="12" font-weight="600" fill="#555">Learning</text>
+    </g>
+  </g>
+</svg>
