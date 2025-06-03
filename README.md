@@ -1,6 +1,6 @@
 # *Co-Seg++*: Mutual Prompt-Guided Collaborative Learning for Versatile Medical Segmentation
 <p align="center">
-  <img src="figs/logo.svg" alt="" width="600" height="250">
+  <img src="figs/logo.svg" alt="" width="600" height="200">
 </p>
 
 
