@@ -33,7 +33,7 @@ conda create -f Co-Seg-Plus.yaml
 
 The data structure is as follows.
 ```
-HRMedSeg
+Co-Seg-Plus
 ├── datasets
 │   ├── image_1024
 │     ├── training_set_metastatic_roi_001.png
