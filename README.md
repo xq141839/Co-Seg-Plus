@@ -29,7 +29,7 @@ conda create -f Co-Seg-Plus.yaml
 **Key requirements**: Cuda 12.2+, PyTorch 2.4+, mamba-ssm 2.1.0+
 
 ## 📚Data Preparation
-- **PUMA**: [https://challenge.isic-archive.com/data/#2018](https://challenge.isic-archive.com/data/#2018)
+- **PUMA**: [Challenge Link](https://puma.grand-challenge.org/)
 
 The data structure is as follows.
 ```
