@@ -60,6 +60,17 @@ The json structure is as follows.
 python train.py --dataset data/$YOUR DATASET NAME$ --sam_pretrain pretrain/$SAM2 CHECKPOINT$
 ```
 
+## 📜Citation
+If you find this work helpful for your project, please consider citing the following paper:
+```
+@article{xu2025co,
+  title={Co-Seg++: Mutual Prompt-Guided Collaborative Learning for Versatile Medical Segmentation},
+  author={Xu, Qing and Luo, Yuxiang and Duan, Wenting and Chen, Zhen},
+  journal={arXiv preprint arXiv:2506.17159},
+  year={2025}
+}
+```
+
 ## Acknowledgements
 
 * [SAM2](https://github.com/facebookresearch/sam2)
