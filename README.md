@@ -1,4 +1,4 @@
-# *Co-Seg++*: Mutual Prompt-Guided Collaborative Learning for Versatile Medical Segmentation
+# TMI 2025 | *Co-Seg++*: Mutual Prompt-Guided Collaborative Learning for Versatile Medical Segmentation
 <p align="center">
   <img src="figs/logo.svg" alt="" width="600" height="200">
 </p>
@@ -17,6 +17,7 @@
 
 ## 📰News
 
+- **[2025.12.05]** Our Co-Seg++ has been accepted by IEEE Transactions on Medical Imaging (TMI) !
 - **[2025.06.03]** We have released the code for Co-Seg++ !
 ## 🛠Setup
 
