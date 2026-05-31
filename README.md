@@ -64,12 +64,14 @@ python train.py --dataset data/$YOUR DATASET NAME$ --sam_pretrain pretrain/$SAM2
 ## 📜Citation
 If you find this work helpful for your project, please consider citing the following paper:
 ```
-@article{xu2025co,
-  title={Co-Seg++: Mutual Prompt-Guided Collaborative Learning for Versatile Medical Segmentation},
+@ARTICLE{11299102,
   author={Xu, Qing and Luo, Yuxiang and Duan, Wenting and Chen, Zhen},
-  journal={arXiv preprint arXiv:2506.17159},
-  year={2025}
-}
+  journal={IEEE Transactions on Medical Imaging}, 
+  title={Co-Seg++: Mutual Prompt-Guided Collaborative Learning for Versatile Medical Segmentation}, 
+  year={2026},
+  volume={45},
+  number={5},
+  pages={1947-1959}
 ```
 
 ## Acknowledgements
